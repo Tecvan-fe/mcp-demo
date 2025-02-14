@@ -1,0 +1,21 @@
+{
+  "name": "3_puppeteer",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsx src/index.ts"
+  },
+  "keywords": [],
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "~1.4.1",
+    "express": "^4.19.2",
+    "puppeteer": "^23.7.1",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
