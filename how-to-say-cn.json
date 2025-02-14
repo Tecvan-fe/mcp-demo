@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "question": "你把事情搞得太复杂了",
+    "answer": "为了遵守时间表，让我们先专注于最初的范围。",
+    "alternativeAnswers": []
+  },
+  {
+    "id": 2,
+    "question": "那个会议听起来就是浪费时间",
+    "answer": "我可能无法为这个会议提供有价值的建议，但我很乐意查看会议纪要。",
+    "alternativeAnswers": []
+  },
+  {
+    "id": 3,
+    "question": "我早就告诉过你了",
+    "answer": "正如我之前预测的那样，这个结果在意料之中。",
+    "alternativeAnswers": []
+  },
+  {
+    "id": 4,
+    "question": "这听起来是个糟糕的主意",
+    "answer": "我们是否确信这是最佳方案，还是我们需要探讨其他可能性？",
+    "alternativeAnswers": []
+  },
+  {
+    "id": 5,
+    "question": "我已经告诉过你这个了",
+    "answer": "如先前所述",
+    "alternativeAnswers": ["自上次沟通以来，相关信息没有发生变化。"]
+  },
+  {
+    "id": 6,
+    "question": "能不能回答我问的所有问题，而不是只挑一个回答",
+    "answer": "您能否就之前提出的其他问题提供一些说明？",
+    "alternativeAnswers": []
+  },
+  {
+    "id": 7,
+    "question": "你到底有没有看我的邮件？",
+    "answer": "重新附上我的邮件以便进一步说明",
+    "alternativeAnswers": ["有最新进展时我会及时通知您"]
+  },
+  {
+    "id": 8,
+    "question": "别来烦我",
+    "answer": "您暂时没有收到我的回复是因为目前还没有新的信息，一旦有更新我会立即告知您。",
+    "alternativeAnswers": []
+  },
+  {
+    "id": 9,
+    "question": "我现在不想和你说话！",
+    "answer": "我目前正在处理一些事情，等我空闲时再与您联系。",
+    "alternativeAnswers": []
+  },
+  {
+    "id": 10,
+    "question": "做好你的本职工作！",
+    "answer": "据我了解，这件事应该由您负责。如果有更合适的人选，请告知。",
+    "alternativeAnswers": []
+  },
+  {
+    "id": 11,
+    "question": "这不是我的工作",
+    "answer": "这超出了我的职责范围，但我很乐意为您介绍能够提供帮助的同事。",
+    "alternativeAnswers": ["这不在我的工作范围内，但我可以为您引荐<插入姓名>，他/她能够提供帮助"]
+  },
+  {
+    "id": 12,
+    "question": "如果你想完成任何一项任务，就别给我分配这么多工作",
+    "answer": "鉴于我目前的工作量较大，您能否帮我理解如何调整优先级来容纳这个新任务？",
+    "alternativeAnswers": []
+  },
+  {
+    "id": 13,
+    "question": "回复我的邮件",
+    "answer": "如果有更好的联系方式请告诉我，因为我希望尽快解决这个问题。",
+    "alternativeAnswers": []
+  },
+  {
+    "id": 14,
+    "question": "这不是我的问题",
+    "answer": "建议将这个问题转给<姓名>，他/她在这方面有专业经验，能够更好地帮助您。",
+    "alternativeAnswers": []
+  },
+  {
+    "id": 15,
+    "question": "如果你把邮件看完了就知道答案了",
+    "answer": "我在下面附上了最初的邮件，其中包含了您所需的所有细节。",
+    "alternativeAnswers": []
+  },
+  {
+    "id": 16,
+    "question": "我完全不知道你在说什么",
+    "answer": "您能帮我更好地理解一下您具体需要我做什么吗？",
+    "alternativeAnswers": []
+  },
+  {
+    "id": 17,
+    "question": "别事事都管",
+    "answer": "我有信心完成这个项目，如果需要您的意见时我会主动联系您。",
+    "alternativeAnswers": []
+  },
+  {
+    "id": 18,
+    "question": "赶紧把这个做完！",
+    "answer": "为了满足即将到来的截止日期，我们需要尽快完成这项工作。",
+    "alternativeAnswers": []
+  },
+  {
+    "id": 19,
+    "question": "别管闲事",
+    "answer": "感谢您的建议。在做出属于我职责范围内的决定时，我会将其纳入考虑。",
+    "alternativeAnswers": []
+  },
+  {
+    "id": 20,
+    "question": "我已经说过很多次了",
+    "answer": "看来这里存在一些沟通上的偏差，因为这些信息之前已经提供过了。",
+    "alternativeAnswers": []
+  },
+  {
+    "id": 21,
+    "question": "我不会帮你做你的工作",
+    "answer": "除了我自己的工作量外，我没有额外的精力承担这些，但我很乐意在合适的范围内提供支持。",
+    "alternativeAnswers": []
+  },
+  {
+    "id": 22,
+    "question": "这件事不需要开会讨论",
+    "answer": "为了节省大家的时间，在我们有明确的议程之前，建议通过邮件方式进行沟通。",
+    "alternativeAnswers": ["为了珍惜大家的时间，我们是否可以改用邮件方式继续沟通？"]
+  },
+  {
+    "id": 23,
+    "question": "你是不是把我的功劳据为己有了？",
+    "answer": "很高兴看到我的想法能够传达给更多的人，如果能让我参与展示环节就更好了。",
+    "alternativeAnswers": []
+  },
+  {
+    "id": 24,
+    "question": "自己去搜索一下",
+    "answer": "互联网是获取这类信息的很好渠道，如果您在网上找不到相关内容，我很乐意为您解答具体问题。",
+    "alternativeAnswers": []
+  },
+  {
+    "id": 25,
+    "question": "你说的话毫无意义",
+    "answer": "看来我们对此的理解有所不同。您能详细说明一下您的想法吗？",
+    "alternativeAnswers": []
+  },
+  {
+    "id": 26,
+    "question": "我的薪水配不上这份工作",
+    "answer": "这超出了我的职责范围，如果有职位扩展的机会，我很乐意讨论调整合同以匹配这些新的职责。",
+    "alternativeAnswers": []
+  },
+  {
+    "id": 27,
+    "question": "我完全忘了你的邮件",
+    "answer": "感谢您的耐心等待，",
+    "alternativeAnswers": []
+  },
+  {
+    "id": 28,
+    "question": "如果要我做这个，我需要更多信息",
+    "answer": "请在获得更多细节后告知我，我需要更多信息才能成功完成这项任务。",
+    "alternativeAnswers": []
+  },
+  {
+    "id": 29,
+    "question": "别在我工作时间开始前打电话给我",
+    "answer": "如需联系我，请注意我的工作时间是早上8点到晚上6点。在此之前收到的通讯可能无法及时看到。",
+    "alternativeAnswers": []
+  },
+  {
+    "id": 30,
+    "question": "检查你的收件箱，我已经发给你了！",
+    "answer": "我之前已经就这件事发送过邮件，如果您没有收到，请告诉我。",
+    "alternativeAnswers": []
+  }
+]

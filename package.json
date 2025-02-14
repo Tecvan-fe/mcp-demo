@@ -1,0 +1,27 @@
+{
+  "name": "mcp-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write .",
+    "preinstall": "npx only-allow pnpm"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "~1.4.1"
+  },
+  "devDependencies": {
+    "prettier": "^3.2.5",
+    "typescript": "^5.4.5",
+    "tsx": "^4.19.1",
+    "@types/node": "^22.9.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ]
+}
