@@ -1,0 +1,27 @@
+{
+  "name": "model-context-protocol-demo-low-server-simple",
+  "version": "0.0.1",
+  "description": "简单的MCP工具调用和资源管理服务器示例",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/simple-tools.js",
+    "start:resource": "node dist/simple-resource.js",
+    "start:prompt": "node dist/simple-prompt.js",
+    "dev": "tsx watch src/simple-tools.ts",
+    "dev:resource": "tsx watch src/simple-resource.ts",
+    "dev:prompt": "tsx watch src/simple-prompt.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.8.0",
+    "tsx": "^4.6.2",
+    "zod": "^3.22.4",
+    "zod-to-json-schema": "^3.22.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.5",
+    "typescript": "^5.3.3"
+  }
+}
