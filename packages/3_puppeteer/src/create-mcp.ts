@@ -357,6 +357,7 @@ export const createMcp = async () => {
   const server = new Server(
     {
       name: 'example-servers/puppeteer',
+      description: '',
       version: '0.1.0',
     },
     {

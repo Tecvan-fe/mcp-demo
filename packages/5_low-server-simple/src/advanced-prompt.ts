@@ -8,15 +8,14 @@ import {
 import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js';
 
 const printLog = (...args: any[]) => {
-  console.error(...args);
+  console.error(JSON.stringify(args[0], null, 2));
 };
 
 // 预定义的提示模板库
 const promptTemplates: Prompt[] = [
   {
-    id: 'email-template',
     name: '电子邮件模板',
-    description: '生成一封专业的电子邮件',
+    description: '生成一封专业的电子邮件，当prompt 以 /email 开头时，使用该模板',
     template: `
 请为我写一封发给{{recipient}}的电子邮件，主题是{{topic}}。
 请使用{{tone}}的语气。
@@ -75,8 +74,7 @@ server.setRequestHandler(ListPromptsRequestSchema, async (request) => {
   }
 
   return {
-    prompts: prompts.map(({ id, name, description }) => ({
-      id,
+    prompts: prompts.map(({ name, description }) => ({
       name,
       description: description || '',
     })),
@@ -85,16 +83,21 @@ server.setRequestHandler(ListPromptsRequestSchema, async (request) => {
 
 // 注册请求处理器 - 获取提示
 server.setRequestHandler(GetPromptRequestSchema, async (request) => {
-  const { promptId } = request.params;
+  const { name } = request.params;
 
-  if (!promptId) {
+  if (!name) {
     throw new Error('缺少提示ID');
   }
 
-  const prompt = promptTemplates.find((p) => p.id === promptId);
+  const prompt = promptTemplates.find((p) => p.name === name);
   if (!prompt) {
-    throw new Error(`提示 ${promptId} 不存在`);
+    throw new Error(`提示 ${name} 不存在`);
   }
+
+  // server.sendLoggingMessage({
+  //   level: 'info',
+  //   message: ['找到prompt'],
+  // });
 
   return {
     prompt,
@@ -113,7 +116,7 @@ async function startServer(): Promise<void> {
     await server.connect(transport);
 
     printLog('STDIO MCP 提示服务器已启动');
-    printLog('支持的提示模板: email-template, summary-template, customer-service');
+    printLog('支持的提示模板: email-template');
 
     process.on('SIGINT', async () => {
       await server.close();

@@ -1,20 +1,19 @@
 // 导入所需的模块
 import { Server } from '@modelcontextprotocol/sdk/server/index.js';
 import {
-  Implementation,
-  ListRootsRequestSchema,
   ReadResourceRequestSchema,
   ListResourcesRequestSchema,
   Resource,
-  Root,
   TextContent,
 } from '@modelcontextprotocol/sdk/types.js';
 import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js';
-import crypto from 'crypto';
-import { z } from 'zod';
 
-const printLog = (...args: any[]) => {
-  console.error(...args);
+const printLog = async (...args: any[]) => {
+  await server.sendLoggingMessage({
+    level: 'info',
+    message: args.map((r) => JSON.stringify(r)),
+    timestamp: new Date().toISOString(),
+  });
 };
 
 // 定义资源类型
@@ -25,11 +24,6 @@ interface FileResource extends Resource {
 
 interface DirectoryResource extends Resource {
   type: 'directory';
-}
-
-// 生成唯一ID
-function generateId(): string {
-  return crypto.randomUUID().substring(0, 8);
 }
 
 // 模拟的文件系统结构
@@ -67,6 +61,7 @@ const server = new Server(
       // 声明服务器支持资源管理能力
       resources: {},
       roots: {},
+      logging: {},
     },
     instructions: '这是一个MCP服务器示例，展示资源管理功能，包括动态创建、更新和删除资源。',
   }
@@ -93,14 +88,6 @@ server.setRequestHandler(ReadResourceRequestSchema, async (request) => {
 
 // 注册请求处理器 - 列出目录内容
 server.setRequestHandler(ListResourcesRequestSchema, async (request) => {
-  const parentId = request.params?.parentId || 'root-docs';
-
-  // 确保资源存在且是目录
-  const resource = fileSystem[parentId as string];
-
-  // 查找该目录下的所有资源
-  const children = Object.values(fileSystem).filter((item) => item.parent === parentId);
-
   return {
     resources: [
       {
@@ -120,6 +107,11 @@ async function startServer(): Promise<void> {
 
   // 连接传输层
   await server.connect(transport);
+  printLog('server started');
+  let count = 0;
+  setInterval(() => {
+    printLog(`tick: ${++count}`);
+  }, 1000);
 
   // 优雅关闭的处理
   process.on('SIGINT', async () => {
@@ -129,4 +121,4 @@ async function startServer(): Promise<void> {
 }
 
 // 启动服务器
-startServer().catch((error) => printLog('启动失败:', error));
+startServer().catch(async (error) => await printLog('启动失败:', error));

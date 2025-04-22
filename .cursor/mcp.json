@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "advanced-prompt": {
+      "type": "stdio",
+      "command": "node /Users/bytedance/studio/mcp-demo/packages/5_low-server-simple/start.js advanced"
+    }
+  }
+}
