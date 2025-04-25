@@ -8,7 +8,7 @@
     "preinstall": "npx only-allow pnpm"
   },
   "dependencies": {
-    "@modelcontextprotocol/sdk": "~1.4.1"
+    "@modelcontextprotocol/sdk": "^1.8.0"
   },
   "devDependencies": {
     "prettier": "^3.2.5",
