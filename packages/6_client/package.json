@@ -1,0 +1,25 @@
+{
+  "name": "6_client",
+  "version": "1.0.0",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "start:server": "tsx server/number.ts"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.8.0",
+    "vitest": "^3.1.2",
+    "zod": "^3.22.4",
+    "zod-to-json-schema": "^3.22.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.5",
+    "tsx": "^4.6.2"
+  }
+}
