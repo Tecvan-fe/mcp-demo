@@ -4,7 +4,6 @@ import { StdioClientTransport } from '@modelcontextprotocol/sdk/client/stdio.js'
 import {
   CreateMessageResultSchema,
   CreateMessageRequestSchema,
-  SamplingMessageSchema,
 } from '@modelcontextprotocol/sdk/types.js';
 import path from 'path';
 import { z } from 'zod';
